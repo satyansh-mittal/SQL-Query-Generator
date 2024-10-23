@@ -7,7 +7,9 @@ import os
 load_dotenv()
 
 # Get the API key from environment variables
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+GOOGLE_API_KEY = st.secrets["general"]["GOOGLE_API_KEY"]
+
+
 def configure_genai(api_key: str) -> genai.GenerativeModel:
     """Configure the Generative AI model with the provided API key."""
     genai.configure(api_key=api_key)
